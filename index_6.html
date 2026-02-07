@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página -->
+    <title>Aviator - Bónus Exclusivo</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Crie a sua conta agora e garanta 25 apostas grátis com 100% de bónus no primeiro depósito.">
+    <meta property="og:title" content="Aviator - Bónus Exclusivo">
+    <meta property="og:description" content="Aproveite prêmios exclusivos e jogue com vantagens reais.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        .header-image-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            line-height: 0;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-image-container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, rgba(0,0,0,0) 70%);
+            top: 40%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 340px; 
+            z-index: 1;
+            margin-top: -20px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 1.4rem; 
+            font-weight: 900;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        p.promo {
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            color: #e0e0e0;
+            font-weight: 700;
+        }
+
+        .benefits {
+            font-size: 0.75rem;
+            color: #bbb;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            line-height: 1.3;
+        }
+
+        /* Texto do Anúncio em destaque */
+        .announcement {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #00FF00;
+            color: #000;
+            text-decoration: none;
+            padding: 16px 35px;
+            font-size: 1rem;
+            font-weight: 900;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+            animation: pulse-animation 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+            70% { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(0, 255, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        }
+
+        .notification-bar {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 15, 15, 0.95);
+            border: 1px solid #222;
+            padding: 8px 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 320px;
+            font-size: 0.7rem;
+            border-left: 3px solid #00FF00;
+            z-index: 100;
+        }
+
+        .user-name { color: #00FF00; font-weight: bold; }
+        .bonus-tag { color: #FFD700; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header-image-container">
+        <img src="https://i.ibb.co/CjWTgM9/file-00000000ab68722f85f3379b26c8f914-1.png" alt="Aviator Promo" class="header-image">
+    </div>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <h1>Receba até 5.000 MT em Bónus</h1>
+        
+        <p class="promo">
+            Crie a sua conta agora e garanta 25 apostas grátis com 100% de bónus no primeiro depósito.
+        </p>
+
+        <p class="benefits">
+            Aproveite prêmios exclusivos e jogue com vantagens reais desde o primeiro acesso.
+        </p>
+
+        <!-- Texto do Anúncio solicitado -->
+        <div class="announcement">
+            A Tempestade Aviator Chegou
+        </div>
+
+        <a href="https://www.megagamelive.com/affiliates/?btag=2115347" class="cta-button">
+            REGISTAR SE AGORA
+        </a>
+    </div>
+
+    <div class="notification-bar">
+        <span id="notif-content" style="transition: opacity 0.5s; opacity: 1;">
+            <span class="user-name">Dércio V.</span> acabou de receber <span class="bonus-tag">25 Voos Grátis</span>
+        </span>
+    </div>
+
+    <script>
+        const nomes = ["Feliciano M.", "Arnaldo J.", "Benilde S.", "Dércio V.", "Amélia T.", "Ricardo G.", "Sérgio L.", "Marta P."];
+        const content = document.getElementById('notif-content');
+
+        setInterval(() => {
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            content.style.opacity = 0;
+            setTimeout(() => {
+                content.innerHTML = `<span class="user-name">${nomeAleatorio}</span> acabou de receber <span class="bonus-tag">25 Voos Grátis</span>`;
+                content.style.opacity = 1;
+            }, 500);
+        }, 5000);
+    </script>
+
+</body>
+</html>
