@@ -188,18 +188,43 @@
     </div>
 
     <script>
-        const nomes = ["Feliciano M.", "Arnaldo J.", "Benilde S.", "Dércio V.", "Amélia T.", "Ricardo G.", "Sérgio L.", "Marta P."];
-        const content = document.getElementById('notif-content');
+        // Configuração do contador e redirecionamento
+        let tempoRestante = 10;
+        const contador = document.getElementById('contador');
+        const numero = document.getElementById('numero');
+        const botao = document.getElementById('botao');
+        const urlRedirecionamento = 'https://media1.placard.co.mz/redirect.aspx?pid=2204&bid=1690'; // Altere para o URL desejado
 
-        setInterval(() => {
-            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
-            content.style.opacity = 0;
-            setTimeout(() => {
-                content.innerHTML = `<span class="user-name">${nomeAleatorio}</span> acabou de receber <span class="bonus-tag">25 Voos Grátis</span>`;
-                content.style.opacity = 1;
-            }, 500);
-        }, 5000);
+        // Iniciar o contador
+        function iniciarContador() {
+            contador.classList.add('ativo');
+            
+            const intervalo = setInterval(() => {
+                tempoRestante--;
+                numero.textContent = tempoRestante;
+
+                if (tempoRestante <= 0) {
+                    clearInterval(intervalo);
+                    redirecionar();
+                }
+            }, 1000);
+        }
+
+        // Função de redirecionamento
+        function redirecionar() {
+            window.location.href = urlRedirecionamento;
+        }
+
+        // Iniciar contador quando a página carrega
+        window.addEventListener('load', () => {
+            iniciarContador();
+        });
+
+        // Permitir clique no botão para redirecionar imediatamente
+        botao.addEventListener('click', (e) => {
+            e.preventDefault();
+            redirecionar();
+        });
     </script>
-
 </body>
 </html>
